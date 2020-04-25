@@ -15,10 +15,16 @@ MonoBehaviour:
   Name: Gunshot
   Description: 'a gunshot wound '
   symptoms:
-  - isCured: 0
+  - name: Bleeding
+    isCured: 0
     symptomType: 0
-    strength: 4
-  - isCured: 0
+    strength: 5
+    bloodLossValue: 0
+    healthLossValue: 0
+  - name: Pain
+    isCured: 0
     symptomType: 1
-    strength: 4
+    strength: 1
+    bloodLossValue: 0
+    healthLossValue: 0
   illnessSeverity: 2

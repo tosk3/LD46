@@ -30,8 +30,21 @@ public class Patient
             bloodLevel = 100 - (10 + (bloodLossStrength * (UnityEngine.Random.Range(Mathf.Clamp(bloodLossStrength - 1, 0, bloodLossStrength - 1), bloodLossStrength + 1))));
             bloodLoss = bloodLossStrength * illness.illnessSeverity;
         }
+        else
+        {
+            bloodLevel = 100;
+            bloodLoss = 0;
+        }
        
         health = 100 - (100-bloodLevel) / 2;
+
+        foreach (Symptom symptom in illness.symptoms)
+        {
+            if(symptom.healthLossValue > 0)
+            {
+                healthLoss += symptom.healthLossValue;
+            }
+        }
 
         isConcious = 50 > health ? true : false;
     }

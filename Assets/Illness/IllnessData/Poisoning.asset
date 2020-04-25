@@ -15,13 +15,22 @@ MonoBehaviour:
   Name: Poisoning
   Description: they ate smthg bad
   symptoms:
-  - isCured: 0
+  - name: Nausea
+    isCured: 0
     symptomType: 4
-    strength: 1
-  - isCured: 0
+    strength: 3
+    bloodLossValue: 0
+    healthLossValue: 1
+  - name: Vomitting
+    isCured: 0
     symptomType: 6
-    strength: 2
-  - isCured: 0
+    strength: 3
+    bloodLossValue: 0
+    healthLossValue: 2
+  - name: Pain
+    isCured: 0
     symptomType: 1
-    strength: 1
+    strength: 2
+    bloodLossValue: 0
+    healthLossValue: 1
   illnessSeverity: 0

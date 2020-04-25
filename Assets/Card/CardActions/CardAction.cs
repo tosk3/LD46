@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class CardAction : ScriptableObject
 {
-    public string name;
+    public new string name;
     public SymptomType symptomType;
 
     public abstract void DoAction();

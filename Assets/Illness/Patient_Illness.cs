@@ -31,8 +31,8 @@ public class Patient_Illness
         return symptoms.Find(x => x.symptomType == _symptomType);
     }
 
-    public void TreatSymptom()
+    public void TreatSymptom(SymptomType _symptomType)
     {
-
+        GetSymptomByType(_symptomType).Cure();
     }
 }

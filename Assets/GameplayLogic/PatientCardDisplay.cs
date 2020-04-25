@@ -39,7 +39,7 @@ public class PatientCardDisplay : MonoBehaviour
             foreach (Symptom symptom in currentPatient.illness.symptoms)
             {
                 GameObject anotherSymptom = Instantiate(symptomObject, symptomObject.transform.parent);
-                anotherSymptom.GetComponent<TextMeshProUGUI>().text = symptom.symptomType.ToString();
+                anotherSymptom.GetComponent<TextMeshProUGUI>().text = symptom.name;
                 anotherSymptom.SetActive(true);
                 symptoms.Add(anotherSymptom);
             }

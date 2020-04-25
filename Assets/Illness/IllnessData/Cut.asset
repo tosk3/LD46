@@ -15,7 +15,10 @@ MonoBehaviour:
   Name: cut
   Description: a small cut
   symptoms:
-  - isCured: 0
+  - name: Bleeding
+    isCured: 0
     symptomType: 0
-    strength: 2
+    strength: 1
+    bloodLossValue: 0
+    healthLossValue: 0
   illnessSeverity: 1

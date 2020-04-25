@@ -14,12 +14,6 @@ public class PatientManager : MonoBehaviour
         SetUpPatientCard();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void SetUpPatientCard()
     {
         currentPatient = new Patient();

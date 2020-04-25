@@ -3,24 +3,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SymptomType
-{
-    bleeding,
-    pain,
-    fever,
-    dizzyness,
-    nausea,
-    swealing,
-    vomiting,
-}
 
-[Serializable]
-public class Symptom
-{
-    public bool isCured;
-    public SymptomType symptomType;
-    public int strength;
-}
+
 [CreateAssetMenu(fileName ="New Illness",menuName = "NegativeObjects/illness")]
 public class Illness_SO : ScriptableObject
 {
