@@ -1,18 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CardDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Card cardInfo;
+
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI actionCostText;
+    public Sprite cardArtwork;
+    
+    public void SetUpCardDisplay()
     {
-        
+        if(cardInfo != null)
+        {
+            nameText.text = cardInfo.name;
+            descriptionText.text = cardInfo.description;
+            actionCostText.text = cardInfo.actionCost.ToString();
+            cardArtwork = cardInfo.artwork;
+        } 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetUpCardDisplay(Card _cardInfo)
     {
-        
+        if (_cardInfo != null)
+        {
+            nameText.text = _cardInfo.name;
+            descriptionText.text = _cardInfo.description;
+            actionCostText.text = _cardInfo.actionCost.ToString();
+            cardArtwork = _cardInfo.artwork;
+        }
+    }
+
+    public void ClearCardData()
+    {
+        nameText.text = null;
+        descriptionText.text = null;
+        actionCostText.text = null;
+        cardArtwork = null;
+    }
+
+    public void ToggleActive()
+    {
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 }
