@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class CardDisplay : MonoBehaviour
@@ -10,7 +11,7 @@ public class CardDisplay : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI actionCostText;
-    public Sprite cardArtwork;
+    public Image cardArtwork;
     
     public void SetUpCardDisplay()
     {
@@ -19,7 +20,7 @@ public class CardDisplay : MonoBehaviour
             nameText.text = cardInfo.name;
             descriptionText.text = cardInfo.description;
             actionCostText.text = cardInfo.actionCost.ToString();
-            cardArtwork = cardInfo.artwork;
+            cardArtwork.sprite = cardInfo.artwork;
         } 
     }
 
@@ -30,7 +31,7 @@ public class CardDisplay : MonoBehaviour
             nameText.text = _cardInfo.name;
             descriptionText.text = _cardInfo.description;
             actionCostText.text = _cardInfo.actionCost.ToString();
-            cardArtwork = _cardInfo.artwork;
+            cardArtwork.sprite = _cardInfo.artwork;
         }
     }
 

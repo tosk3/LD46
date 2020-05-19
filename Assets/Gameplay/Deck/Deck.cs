@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardButton : MonoBehaviour
+public class Deck : MonoBehaviour
 {
+    public int deckSize;
+    public List<Card> deck;
+
     // Start is called before the first frame update
     void Start()
     {
